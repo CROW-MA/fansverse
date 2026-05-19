@@ -1,0 +1,113 @@
+.home { min-height: 100vh; background: var(--dark); }
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; position: sticky; top: 0;
+  background: rgba(13,13,15,0.9); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border); z-index: 10;
+}
+.navLogo {
+  font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+  background: linear-gradient(135deg, #E8365D, #D4A843);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.navLinks { display: flex; align-items: center; gap: 8px; }
+
+.hero {
+  text-align: center; padding: 5rem 1.5rem 4rem;
+  max-width: 760px; margin: 0 auto;
+}
+.heroBadge {
+  display: inline-block; background: var(--rose-light); color: var(--rose);
+  font-size: 13px; font-weight: 600; padding: 6px 16px;
+  border-radius: 20px; margin-bottom: 1.5rem;
+  border: 1px solid rgba(232,54,93,0.25);
+}
+.heroTitle {
+  font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 700; line-height: 1.1; margin-bottom: 1.25rem;
+}
+.heroSub { font-size: 1.05rem; color: var(--text2); line-height: 1.7; margin-bottom: 2rem; }
+.heroCtas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.heroStats {
+  display: flex; align-items: center; justify-content: center; gap: 2rem;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 1.25rem 2rem; display: inline-flex;
+}
+.heroStat { text-align: center; }
+.heroStat span { font-size: 1.4rem; font-weight: 700; color: var(--rose); display: block; }
+.heroStat p { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.heroStatDiv { width: 1px; height: 40px; background: var(--border); }
+
+.section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+.sectionHeader { text-align: center; margin-bottom: 2.5rem; }
+.sectionHeader h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.sectionHeader p { color: var(--text2); font-size: 1rem; }
+
+.featuresGrid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;
+}
+.featureCard {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 1.5rem; transition: border-color 0.2s;
+}
+.featureCard:hover { border-color: var(--border2); }
+.featureIcon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+.featureCard h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+.featureCard p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+
+.compTable {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+}
+.compRow {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  padding: 12px 1.5rem; border-bottom: 1px solid var(--border);
+  font-size: 13px; align-items: center;
+}
+.compRow:last-child { border-bottom: none; }
+.compHeader { font-weight: 600; color: var(--text2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; background: var(--dark3); }
+.compUs { color: var(--success); font-weight: 500; text-align: center; }
+.compThem { color: var(--text3); text-align: center; }
+
+.stepsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.stepCard {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 1.5rem; position: relative; overflow: hidden;
+}
+.stepNum {
+  font-family: var(--font-display); font-size: 2.5rem; font-weight: 700;
+  color: var(--rose); opacity: 0.3; position: absolute; top: 1rem; right: 1rem;
+}
+.stepCard h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+.stepCard p { font-size: 13px; color: var(--text2); }
+
+.ctaSection {
+  text-align: center; padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, rgba(232,54,93,0.08), rgba(212,168,67,0.08));
+  border-top: 1px solid var(--border);
+}
+.ctaSection h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; margin-bottom: 0.75rem; }
+.ctaSection p { color: var(--text2); margin-bottom: 2rem; }
+
+.footer {
+  text-align: center; padding: 2rem; border-top: 1px solid var(--border);
+}
+.footerLogo {
+  font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+  background: linear-gradient(135deg, #E8365D, #D4A843);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 1rem;
+}
+.footerLinks { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; }
+.footerLinks a { font-size: 13px; color: var(--text3); }
+.footerLinks a:hover { color: var(--text); }
+.footerCopy { font-size: 12px; color: var(--text3); }
+
+@media (max-width: 600px) {
+  .nav { padding: 1rem; }
+  .heroStats { flex-direction: column; gap: 1rem; }
+  .heroStatDiv { width: 40px; height: 1px; }
+  .compRow { grid-template-columns: 1fr 1fr; }
+  .compRow > span:last-child { display: none; }
+  .compHeader > span:last-child { display: none; }
+}

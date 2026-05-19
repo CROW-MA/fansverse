@@ -1,0 +1,17 @@
+#!/bin/bash
+# EJEMPLO - Copiar a setup-local.sh y completar con valores reales
+
+# Base de datos
+DB_PASSWORD=clave_segura_db
+
+# JWT
+JWT_SECRET=$(openssl rand -base64 64)
+JWT_REFRESH_SECRET=$(openssl rand -base64 64)
+
+# Stripe (test)
+STRIPE_SECRET_KEY=clave_secreta_stripe_test
+STRIPE_WEBHOOK_SECRET=clave_webhook_stripe_test
+
+# URLs
+FRONTEND_URL=http://localhost:3000
+API_URL=http://localhost:4000

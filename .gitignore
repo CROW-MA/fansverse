@@ -1,0 +1,51 @@
+# ═══════════ SECRETOS - NUNCA SUBIR ═══════════
+.env
+.env.*
+*.env
+!*.env.example
+frontend/.env
+frontend/.env.*
+backend/.env
+backend/.env.*
+
+# ═══════════ SCRIPTS DE DESPLIEGUE ═══════════
+deploy.sh
+setup-local.sh
+start-local.sh
+start.sh
+stop.sh
+update.sh
+cat.save
+*.save
+
+# ═══════════ CONFIGURACIONES DEL SISTEMA ═══════════
+nginx.conf
+ecosystem.config.js
+pm2.config.js
+
+# ═══════════ DEPENDENCIAS ═══════════
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+venv/
+env/
+
+# ═══════════ BUILDS Y CACHÉ ═══════════
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+
+# ═══════════ IDE Y OS ═══════════
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ═══════════ UPLOADS ═══════════
+backend/uploads/*
+!backend/uploads/.gitkeep
